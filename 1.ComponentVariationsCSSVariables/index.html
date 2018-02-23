@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Variations</title>
+  <style media="screen">
+    .btn {
+      padding: 1rem 3rem;
+      border: 2px solid var(--color, black);
+      background: transparent;
+      font-size: 0.8em;
+      border-radius: 2px;
+    }
+
+    .btn:hover {
+      cursor: pointer;
+      background: var(--color, black);
+      color: white;
+    }
+
+    .btn.btn-red {
+      --color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <button class="btn">Hello</button>
+    <button class="btn btn-red">Hello Again</button>
+  </div>
+</body>
+
+</html>
