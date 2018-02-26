@@ -1,3 +1,3 @@
 # Component styled with user input
 
-![Alt text](/2.ThemedWebsitesUsingVariables/screenshots/userstyle.jpg?raw=true "Example Calm")
+![Alt text](/3.CSSUserStyledComponent/screenshots/userstyle.jpg?raw=true "Example Calm")
