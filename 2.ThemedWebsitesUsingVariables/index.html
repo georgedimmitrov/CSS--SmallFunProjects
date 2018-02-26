@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style media="screen">
+    body {
+      background-color: var(--bg, white);
+      color: var(--bg-text, black)
+    }
+
+    button {
+      padding: 0.5rem 0.8rem;
+      background: #fff;
+      font-size: 0.8em;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="theme">
+    <button value="dark">dark</button>
+    <button value="calm">calm</button>
+    <button value="light">light</button>
+  </div>
+
+  <article>
+    <h1>Article 1</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+
+  <script type="text/javascript">
+    const root = document.documentElement
+    const themeBtns = document.querySelectorAll('.theme > button')
+
+    themeBtns.forEach((btn) => {
+      btn.addEventListener('click', handleThemeUpdate)
+    })
+
+    function handleThemeUpdate(e) {
+      switch (e.target.value) {
+        case 'dark':
+          root.style.setProperty('--bg', 'black')
+          root.style.setProperty('--bg-text', 'white')
+          break
+        case 'calm':
+          root.style.setProperty('--bg', '#B3E5FC')
+          root.style.setProperty('--bg-text', '#37474F')
+          break
+        case 'light':
+          root.style.setProperty('--bg', 'white')
+          root.style.setProperty('--bg-text', 'black')
+          break
+      }
+    }
+  </script>
+</body>
+
+</html>
